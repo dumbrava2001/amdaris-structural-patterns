@@ -10,6 +10,6 @@ public class ItalicTextDecorator : TextDecorator
 
     public override string GetText()
     {
-        return $"<italic>\n{_text}\n</italic>";
+        return $"<italic>\n{Text.GetText()}\n</italic>";
     }
 }

@@ -10,6 +10,6 @@ public class UnderlineTextDecorator : TextDecorator
 
     public override string GetText()
     {
-        return $"<underline>\n{_text.GetText()}\n</underline>";
+        return $"<underline>\n{Text.GetText()}\n</underline>";
     }
 }

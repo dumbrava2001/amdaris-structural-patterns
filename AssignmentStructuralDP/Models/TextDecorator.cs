@@ -4,12 +4,23 @@ namespace AssignmentStructuralDP.Models;
 
 public abstract class TextDecorator : ITextCreator
 {
-    protected readonly ITextCreator _text;
+    protected readonly ITextCreator Text;
 
     protected TextDecorator(ITextCreator text)
     {
-        _text = text;
+        Text = text;
     }
 
     public abstract string GetText();
+
+    public ITextCreator RemoveDecorator(Type type)
+    {
+        if (GetType() == type)
+        {
+            return Text;
+        }
+
+        return Text is TextDecorator decorator ? decorator.RemoveDecorator(type) : this;
+    }
+    
 }

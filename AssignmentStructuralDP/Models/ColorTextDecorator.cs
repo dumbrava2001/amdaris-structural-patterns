@@ -5,7 +5,7 @@ namespace AssignmentStructuralDP.Models;
 public class ColorTextDecorator : TextDecorator
 {
     public string Color { get; set; }
-    
+
     public ColorTextDecorator(ITextCreator text, string color) : base(text)
     {
         Color = color;
@@ -13,7 +13,7 @@ public class ColorTextDecorator : TextDecorator
 
     public override string GetText()
     {
-        return $"<text-color: {Color}>\n{_text.GetText()}\n</text-color>";
+        return $"<text-color: {Color}>\n{Text.GetText()}\n</text-color>";
     }
     
 }

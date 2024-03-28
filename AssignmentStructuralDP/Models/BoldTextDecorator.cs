@@ -10,7 +10,7 @@ public class BoldTextDecorator : TextDecorator
 
     public override string GetText()
     {
-        return $"<bold>\n{_text.GetText()}\n</bold>";
+        return $"<bold>\n{Text.GetText()}\n</bold>";
     }
     
 }
